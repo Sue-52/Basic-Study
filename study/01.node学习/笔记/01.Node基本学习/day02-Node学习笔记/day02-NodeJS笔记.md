@@ -62,7 +62,7 @@ exports.add = function () {
 exports = module.exports = {};
 ```
 
-![clipboard.png](day02-NodeJS笔记.assets\bVRMVd-1622722849063)
+![clipboard.png](./day02-NodeJS笔记.assets/bVRMVd-1622722849063)
 
 > 其实 require 导出的内容是 module.exports 的指向的内存块内容，并不是 exports 的。
 > 简而言之，区分他们之间的区别就是 exports 只是 module.exports 的引用，辅助后者添加内容用的。
@@ -98,7 +98,7 @@ npm init -y
 
 2. 找到该第三方包的 package.json 文件，并且找到里面的 main 属性对应的入口模块，该入口模块即为加载的第三方模块。
 
-![image-20210603205246373](day02-NodeJS笔记.assets\image-20210603205246373.png)
+![image-20210603205246373](./day02-NodeJS笔记.assets/image-20210603205246373.png)
 
 ```json
 {

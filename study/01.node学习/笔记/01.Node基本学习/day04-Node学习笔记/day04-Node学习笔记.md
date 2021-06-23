@@ -1,6 +1,6 @@
 ## day04-Node 学习笔记
 
-![Node.js 流（stream）](day04-Node学习笔记.assets\v2-b4d3633fc7c1cedbc488fe190411d1bc_1440w.jpg)
+![Node.js 流（stream）](./day04-Node学习笔记.assets/v2-b4d3633fc7c1cedbc488fe190411d1bc_1440w.jpg)
 
 ### 到底什么是流(Stream)？
 
@@ -14,7 +14,7 @@
 
 **很多在 Node.js 内置的模块都实现了流接口：**
 
-![在 Node.js 内置的模块-流接口](day04-Node学习笔记.assets\v2-e64c197ea280e3fd16c26c0437d062c7_720w.jpg)
+![在 Node.js 内置的模块-流接口](./day04-Node学习笔记.assets/v2-e64c197ea280e3fd16c26c0437d062c7_720w.jpg)
 
 上面列表中有些原生的 Node.js 对象是可读和可写的流，它们中的一些即是可读的也是可写的流，比如 TCP sockets，zlib，crypto 流。
 
@@ -121,7 +121,7 @@ readable.on('end', () => {
 
 这里有一个被可读流和可写流使用的重要事件和函数列表：
 
-![可读流和可写流使用的重要事件和函数列表](day04-Node学习笔记.assets\v2-9460338749a9bb80067b4d60fa3a26dc_720w.jpg)
+![可读流和可写流使用的重要事件和函数列表](./day04-Node学习笔记.assets/v2-9460338749a9bb80067b4d60fa3a26dc_720w.jpg)
 
 事件和函数是某种方式相关的，因为它们可以一起使用。
 
@@ -145,7 +145,7 @@ Node.js 时单进程单线程应用程序，但是因为 V8 引擎的提供异�
 
 **线程**是进程的一个实体,是 CPU 调度和分派的基本单位,它是比进程更小的能独立运行的基本单位.线程自己基本上不拥有系统资源,只拥有一点在运行中必不可少的资源(如程序计数器,一组寄存器和栈),但是它可与同属一个进程的其他的线程共享进程所拥有的全部资源.
 
-![线程和进程都是在使用cpu内存](day04-Node学习笔记.assets\image-20210610143156400.png)
+![线程和进程都是在使用cpu内存](./day04-Node学习笔记.assets/image-20210610143156400.png)
 
 Node.js 几乎每一个 API 都支持回调函数
 
@@ -163,7 +163,7 @@ Node.js 使用事件驱动模型，当 web server 接收到请求，就把它关
 
 在事件驱动模型中，会生成一个主循环来监听事件，当检测到事件时触发回调函数。
 
-![img](day04-Node学习笔记.assets\event_loop.jpg)
+![img](./day04-Node学习笔记.assets/event_loop.jpg)
 
 整个事件驱动的流程就是这么实现的，非常简洁。有点类似于观察者模式，事件相当于一个主题(Subject)，而所有注册到这个事件上的处理函数相当于观察者(Observer)。
 
@@ -177,15 +177,15 @@ Node.js 有多个内置的事件，我们可以通过引入 events 模块，并�
 
 **NodeJS 非阻塞机制：**
 
-![NodeJS 非阻塞机制](day04-Node学习笔记.assets\g2lkjwan8r.png)
+![NodeJS 非阻塞机制](./day04-Node学习笔记.assets/g2lkjwan8r.png)
 
 **Node.js 中事件循环过程:**
 
-![NodeJS 中事件循环过程](day04-Node学习笔记.assets\1460000012145392)
+![NodeJS 中事件循环过程](./day04-Node学习笔记.assets/1460000012145392)
 
 **观察者模式--订阅，发布模式：**
 
-![订阅，发布模式](day04-Node学习笔记.assets\8b95d26aed904794866532a6cb31e47e~tplv-k3u1fbpfcp-zoom-1.image)
+![订阅，发布模式](./day04-Node学习笔记.assets/8b95d26aed904794866532a6cb31e47e~tplv-k3u1fbpfcp-zoom-1.image)
 
 > 1.  消息中心：负责存储消息与订阅者的对应关系，有消息触发时，负责通知订阅者
 > 2.  订阅者：去消息中心订阅自己感兴趣的消息

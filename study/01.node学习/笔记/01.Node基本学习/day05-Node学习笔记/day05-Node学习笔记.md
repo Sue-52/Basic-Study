@@ -54,7 +54,7 @@ Node.js 中`path`模块提供了操作路径的 API，`os` 模块中提供了一
    console.log(info); // .net
    ```
 
-   ![image-20210610201629866](day05-Node学习笔记.assets\image-20210610201629866.png)
+   ![image-20210610201629866](./day05-Node学习笔记.assets/image-20210610201629866.png)
 
    - `path.resolve([...path])` 把一个路径或者路径片段的序列借此为一个绝对路径。
 
@@ -66,7 +66,7 @@ Node.js 中`path`模块提供了操作路径的 API，`os` 模块中提供了一
    console.log(getPath); // D:\01.Graduation\study\01.node学习\day05-学习\01.path\avs\student\123
    ```
 
-   ![image-20210610202441696](day05-Node学习笔记.assets\image-20210610202441696.png)
+   ![image-20210610202441696](./day05-Node学习笔记.assets/image-20210610202441696.png)
 
    给定的路径序列是`从右到左` 被处理的，后面每个 path 被依次解析，直到构成一个绝对路径
 
@@ -78,7 +78,7 @@ Node.js 中`path`模块提供了操作路径的 API，`os` 模块中提供了一
    console.log(absolutePath); // D:\01.Graduation\study\01.node学习\day05-学习\01.path\file\test\node
    ```
 
-   ![image-20210610205841538](day05-Node学习笔记.assets\image-20210610205841538.png)
+   ![image-20210610205841538](./day05-Node学习笔记.assets/image-20210610205841538.png)
 
    > `__dirname` : 获取当前执行文件所在目录的完整目录名
    > `__filenames` : 获取当前**执行文件**的带有完整绝对路径的文件命
@@ -93,7 +93,7 @@ Node.js 中`path`模块提供了操作路径的 API，`os` 模块中提供了一
    console.log(os);
    ```
 
-   ![image-20210610212733269](day05-Node学习笔记.assets\image-20210610212733269.png)
+   ![image-20210610212733269](./day05-Node学习笔记.assets/image-20210610212733269.png)
 
    - `os.totalmem()` 获取内存数据
 
@@ -101,7 +101,7 @@ Node.js 中`path`模块提供了操作路径的 API，`os` 模块中提供了一
    console.log(os.totalmem()); // 16969207808
    ```
 
-   ![image-20210610212855947](day05-Node学习笔记.assets\image-20210610212855947.png)
+   ![image-20210610212855947](./day05-Node学习笔记.assets/image-20210610212855947.png)
 
 3. `url`
 
@@ -112,4 +112,4 @@ Node.js 中`path`模块提供了操作路径的 API，`os` 模块中提供了一
    console.log(obj);
    ```
 
-   ​ ![image-20210611192608644](day05-Node学习笔记.assets\image-20210611192608644.png)
+   ​ ![image-20210611192608644](./day05-Node学习笔记.assets/image-20210611192608644.png)
