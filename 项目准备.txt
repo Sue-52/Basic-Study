@@ -1,1 +1,1 @@
-使用linux+mysql+nodeJS+koa+Vue3+UI框架（待定）
+使用linux+Nginx+mysql+nodeJS+koa+Vue3+UI框架（待定）

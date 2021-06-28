@@ -52,3 +52,17 @@ npm install --save puppeteer
 - **`Tracing`**：抓取性能数据进行分析
 - **`Response`**： 页面收到的响应
 - **`Request`**： 页面发出的请求
+
+**默认设置:**
+
+1. `使用无头模式`：uppeteer 运行 Chromium 的 headless mode。如果想要使用完全版本的 Chromium，设置 'headless' option 即可。
+
+```js
+const browser = await puppeteer.launch({ headless: false });
+```
+
+2. `运行绑定的 Chromium 版本`:默认情况下，Puppeteer 下载并使用特定版本的 Chromium 以及其 API 保证开箱即用。 如果要将 Puppeteer 与不同版本的 Chrome 或 Chromium 一起使用，在创建 Browser 实例时传入 Chromium 可执行文件的路径即可
+
+```js
+const browser = await puppeteer.launch({ executablePath: "/path/to/Chrome" });
+```
