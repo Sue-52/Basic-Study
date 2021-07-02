@@ -102,3 +102,10 @@ dist
 
 # TernJS port file
 .tern-port
+
+# 空行或者以 # 开头的行都会被 Git 忽略。一般空行用于可读性的分隔， # 一般作注释用
+# 以斜杠 / 结尾表示忽略目录
+# 以 / 开头表示根目录下的文件或目录
+# 以叹号 ! 表示不忽略(跟踪)匹配到的文件或目录
+Project Document/
+# Sakura-BackStage-Manager-System/
