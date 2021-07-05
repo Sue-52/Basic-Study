@@ -64,6 +64,7 @@ const fs = require("fs");
 let rs = fs.createReadStream("./Aimer - カタオモイ.flac", {
   flags: "r",
 });
+// 创建写入流
 var ws = fs.createWriteStream("./单相思-Aimer.flac", {
   flags: "w",
 });
