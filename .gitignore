@@ -108,4 +108,6 @@ dist
 # 以 / 开头表示根目录下的文件或目录
 # 以叹号 ! 表示不忽略(跟踪)匹配到的文件或目录
 Project Document/
+01.面试题/
+_book/
 # Sakura-BackStage-Manager-System/
