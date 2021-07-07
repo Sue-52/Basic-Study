@@ -1,7 +1,5 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue';
-// import sass from "sass"
-// import sassLoader from "sass-loader"
 // 模块化配置
 // const path = require('path');
 
@@ -9,5 +7,13 @@ import vue from '@vitejs/plugin-vue';
 export default defineConfig({
   plugins: [
     vue(),
-  ]
+  ],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        // 配置公共的scss样式
+        additionalData: `@import "./src/assets/scss/global.scss";`
+      }
+    }
+  }
 })
