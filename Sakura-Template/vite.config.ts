@@ -2,7 +2,7 @@
  * @Author: Edmond℡优格·索托斯T_T～♥
  * @Date: 2021-06-29 20:51:50
  * @LastEditors: OBKoro1
- * @LastEditTime: 2021-07-09 20:40:15
+ * @LastEditTime: 2021-07-11 22:42:17
  * @FilePath: \Basic-Study\Sakura-Template\vite.config.ts
  */
 import { defineConfig } from 'vite'
@@ -19,7 +19,7 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         // 配置公共的scss样式
-        additionalData: `@import "./src/assets/scss/global.scss";`
+        additionalData: `@import "./src/assets/scss/global.scss";`,
       }
     }
   }

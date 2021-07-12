@@ -1,1 +1,13 @@
 $injectedColor: pink;
+
+// 设置全局鼠标样式
+body {
+  cursor: url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/cursor/normal.cur),
+    auto;
+}
+
+// 将所有的 router-link 的标签上替换鼠标样式
+a {
+  cursor: url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/cursor/ayuda.cur),
+    auto;
+}

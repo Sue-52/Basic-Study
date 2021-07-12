@@ -2,12 +2,13 @@
  * @Author: Edmond℡优格·索托斯T_T～♥
  * @Date: 2021-06-29 20:51:50
  * @LastEditors: OBKoro1
- * @LastEditTime: 2021-07-09 20:51:22
+ * @LastEditTime: 2021-07-12 11:23:28
  * @FilePath: \Basic-Study\Sakura-Template\src\App.vue
 -->
 <template>
   <div class="home_page">
     <NavBarVue />
+    <div class="test"></div>
   </div>
 </template>
 
@@ -34,5 +35,9 @@ export default {
   }
   .name {
     color: $injectedColor;
+  }
+  .test {
+    width: 100%;
+    height: 2000px;
   }
 </style>

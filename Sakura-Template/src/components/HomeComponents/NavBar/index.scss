@@ -1,25 +1,37 @@
-#header {
+.navbar {
   width: 100%;
   height: 75px;
-  background: 0 0;
   transition: all 0.4s ease;
   position: fixed;
-  background-color: #ccc;
   z-index: 9999;
   top: 0;
-}
-.top_navbar {
-  width: 100%;
-  background-color: #ccc;
+
+  &:hover .top_navbar:hover {
+    position: fixed;
+    left: 0;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 1px 40px -8px rgb(0 0 0 / 50%);
+    transition: all 0.4s ease;
+  }
 }
 
+.top_navbar {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  overflow: hidden;
+  position: relative;
+}
+
+// 左侧字体样式
 .top_navbar-left {
   color: #464646;
   float: left;
   font-size: 25px;
   font-weight: 800;
   line-height: 56px;
-  padding: 11px 15px 0px 6px;
+  padding: 9px 15px 0px 6px;
+  // cursor: pointer;
 
   &:hover .de,
   &:hover .top_fgo {
@@ -28,7 +40,7 @@
 
   // 左侧博客名
   .top_name {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 8px;
     color: #464646;
     line-height: 25px;
@@ -77,6 +89,96 @@
     }
     100% {
       transform: rotate(360deg);
+    }
+  }
+}
+
+// 中间导航栏
+.top_navbar_list {
+  display: inline-block;
+  width: auto;
+  height: 53px;
+  margin: 15px 0 0 10px;
+  font-size: 16px;
+  color: #666;
+  position: relative;
+  left: 35%;
+  transform: translateX(-50%);
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+
+    > li {
+      float: left;
+      margin: 0 13px;
+      position: relative;
+      transition: all 1s ease;
+    }
+
+    a {
+      padding: 10px 0;
+      display: inline-block;
+      color: #666;
+
+      &:hover,
+      &:hover::after {
+        max-width: 100%;
+        color: orange;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -16px;
+        left: 2px;
+        height: 6px;
+        background-color: #fe9600;
+        width: 100%;
+        max-width: 0;
+        transition: max-width 0.25s ease-in-out;
+      }
+    }
+
+    span {
+      font-weight: 900;
+    }
+
+    i {
+      margin-right: 5px;
+    }
+  }
+}
+// 当窗口缩小到1240px时将列表隐藏
+@media screen and (max-width: 1240px) {
+  .top_navbar_list {
+    display: none;
+  }
+}
+
+// 右侧字体图标样式
+.top_navbar_right {
+  float: right;
+  height: 75px;
+
+  .other_search,
+  .other_login {
+    float: right;
+    height: 75px;
+    line-height: 75px;
+    margin: 0px 15px;
+
+    i {
+      color: #666;
+      cursor: pointer;
+      font-size: 26px;
+      transition: all 0.3s ease-in-out;
+    }
+    &:hover i {
+      color: orange;
     }
   }
 }
