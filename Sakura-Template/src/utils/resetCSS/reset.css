@@ -60,10 +60,12 @@ iframe {
 }
 a {
   color: #000000;
+  text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
   color: #ff0000;
+  text-decoration: none;
 }
 img {
   vertical-align: middle;
