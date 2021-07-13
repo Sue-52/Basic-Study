@@ -2,7 +2,7 @@
  * @Author: Edmond℡优格·索托斯T_T～♥
  * @Date: 2021-07-09 20:35:09
  * @LastEditors: OBKoro1
- * @LastEditTime: 2021-07-12 11:28:23
+ * @LastEditTime: 2021-07-13 16:16:19
  * @FilePath: \Basic-Study\Sakura-Template\src\components\HomeComponents\NavBar\NavBar.vue
 -->
 <template>
@@ -52,10 +52,20 @@
 
 <script lang="ts">
 import { ref } from "vue";
+
+interface List {
+  id: number;
+  title: string;
+  route: string;
+  iconfont: string;
+  children?: [];
+}
+
 export default {
-  name: "navbar",
+  name: "Navbar",
   setup() {
     //#region 顶部导航栏的数据
+    // let navBarList = ref<[List]>([
     let navBarList = ref([
       {
         id: 1,
@@ -69,7 +79,7 @@ export default {
         title: "归档",
         route: "/timeline",
         iconfont: "iconfont icon-guidangxiangmu",
-        // children: [],
+        children: [],
       },
       // 学习列表
       {
