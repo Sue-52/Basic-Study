@@ -149,7 +149,7 @@ app.get("/", (request, response) => {
 });
 ```
 
-#### 请求对象
+#### 请求对象 (Request)
 
 `request` 对象代表 HTTP 请求，并据偶请求查询字符串，参数，正文，HTTP 标头等的属性。
 
@@ -203,3 +203,9 @@ app.get("/", (request, response) => {
     //   connection: 'keep-alive'
     // }
     ```
+
+#### 响应对象 (Response)
+
+res 对象表示 Express 应用在收到 HTTP 请求时发送的 HTTP 响应。
+
+1. `res.`

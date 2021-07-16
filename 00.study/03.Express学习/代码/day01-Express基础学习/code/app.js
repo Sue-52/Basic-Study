@@ -27,14 +27,17 @@ const app = express();
 //   res.send("Got a Delete request!!")
 // });
 
+// app.get("/", (req, res) => {
+//   res.send("Hello World");
+//   console.log(req.params);  //  {}
+//   console.log(req.query);  //  { name: 'sue', age: '18' }
+//   console.log(req.method);
+//   console.log(req.path);
+//   console.log(req.headers);
+//   console.log(req.baseUrl);
+// })
 app.get("/", (req, res) => {
-  res.send("Hello World");
-  console.log(req.params);  //  {}
-  console.log(req.query);  //  { name: 'sue', age: '18' }
-  console.log(req.method);
-  console.log(req.path);
-  console.log(req.headers);
-  console.log(req.baseUrl);
+
 })
 
 // 监听端口
