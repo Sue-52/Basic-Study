@@ -1,0 +1,22 @@
+案例一：
+
+通过案例创建一个简单的 CRUD 接口服务，从而掌握 Express 的基本使用
+
+需求：实现对任务清单的 CRUD 接口服务
+
+接口提供：
+- 查询任务列表：
+  - GET / todos
+  // 使用json文件来完成该接口的提供
+
+- 根据 ID 查询单个任务
+  - GET /todos/:id
+
+- 添加任务
+  - POST /todos
+
+- 修改任务
+  - PATCH /todos/:id
+
+- 删除任务
+  - DELETE /todos/:id

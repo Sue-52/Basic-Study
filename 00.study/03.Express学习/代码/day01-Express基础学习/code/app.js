@@ -37,7 +37,8 @@ const app = express();
 //   console.log(req.baseUrl);
 // })
 app.get("/", (req, res) => {
-
+  res.statusCode = 201;
+  res.end();
 })
 
 // 监听端口

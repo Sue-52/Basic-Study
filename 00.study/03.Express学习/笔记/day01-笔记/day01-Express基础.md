@@ -208,4 +208,14 @@ app.get("/", (request, response) => {
 
 res 对象表示 Express 应用在收到 HTTP 请求时发送的 HTTP 响应。
 
-1. `res.`
+1. `res.statusCode`
+
+   设置响应码
+
+   ```js
+   res.statusCode = 201;
+   ```
+
+   ![image-20210723150804144](.\img\image-20210723150804144.png)
+
+**多看文档上的 api**
