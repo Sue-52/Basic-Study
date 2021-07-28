@@ -169,3 +169,76 @@ app.get("/user/:id", logStuff, (req, res, next) => {
 ```
 
 ### 路由级别中间件
+
+路由级别中间件与应用级别中间件的工作方式相同，只不过它绑定到的实例 `express.Router()` .
+
+```js
+// 创建路由实例
+// 路由实例其实相当于一个mini Express 实例
+var router = express.Router();
+
+// 配置路由
+router.get("/", (req, res) => {
+  res.send("GET /");
+});
+
+// 导出路由；
+module.exports = router;
+```
+
+使用 `router.use()` 和 `router.METHOD()` 函数加载路由器级别中间件。
+
+```js
+app.use(router);
+```
+
+在目录中创建一个 routers 文件夹，并在其中创建一个 routers.js 文件用于继承写所有的路由接口。
+
+### 错误处理中间件
+
+已与其他中间件函数相同的方式定义错误处理中间件函数，除了使用四个参数而不是三个参数（特别是使用签名（err，req，res，next））之外：
+
+```js
+// 在所有的挂在完成后的最后书写错误处理中间件
+app.use((err, req, res, next) => {
+  console.log("error:" + err.message);
+  res.status(500).json({
+    code: 500,
+    message: err.message,
+  });
+});
+```
+
+错误处理中间件始终带有四个参数。我们必须提供四个参数已将其标识为错误处理中间件函数。即使不需要使用该 next 对象，也必须指定它以维护签名。否则，该 `next` 对象将被解释为常规中间件，并且无法处理错误。
+
+二 u 过将任何内容传给该 next（）函数（字符串除外'route'），Express 都将当前请求时为错误，并且将跳过所有剩余的非错误处理路由和中间件函数。
+
+### 处理 404
+
+```js
+// 通常在所有的路由之后配置处理 404 内容
+app.use((req, res, next) => {
+  res.status(404).send("404 Not Found");
+});
+```
+
+### 内置中间件
+
+Express 具有以下内置中间件函数：
+
+- `express.json()` 解析 Content-Type 为 `application/json` 格式的请求体
+- `express.urlencoded()` 解析 Content-Type 为`application/x-www-form-urlencoded` 格式的请求体。
+- `express.raw()` 解析 Content-Type 为`application/octet-stream`格式请求体
+- `express.text()` 解析 Content-Type 为`text/plain` 格式请求体
+- `express.static()` 托管静态资源文件
+
+### 第三方中间件
+
+早期的 Express 内置了很多中间件。后来 Express 在 4.x 之后移除了这些内置中间件，官方把这些功能性中间件以包的形式单独提供了出来。这样的目的是为了保持 Express 本事极简灵活的特点。
+
+文档：
+https://expressjs.com/en/resources/middleware.html
+
+![官方维护的中间件](./img/image-20210728153214017.png)
+
+![第三方维护的中间件](./img/image-20210728153247793.png)
