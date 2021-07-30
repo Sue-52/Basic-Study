@@ -12,7 +12,11 @@ exports.login = async (req, res) => {
 //#region 2. 用户注册功能
 exports.register = async (req, res) => {
   try {
-    // 处理请求
+    // 1. 获取请求体数据
+    console.log(req.body);
+    // 2. 数据验证
+    // 3. 验证通过保存到数据库
+    // 4. 发送成功请求
     res.send("POST /users 用户注册")
   } catch (error) {
     next(error)

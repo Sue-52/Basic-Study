@@ -5,6 +5,8 @@ const morgan = require("morgan");
 const cors = require("cors");
 // 导入路由文件
 const router = require("./routers");
+// 导入错误同意处理配置项文件
+const errorHandler = require("./middlewares/error-handler")
 
 const app = express();
 
@@ -23,6 +25,10 @@ const PORT = process.env.PORT || 3000;
 
 // 挂在路由
 app.use("/api", router)
+
+// 挂在统一处理的服务端错误中间件
+app.use(errorHandler())
+
 
 app.listen(PORT, () => {
   console.log(`Server running at Http://localhost:${PORT}`)
