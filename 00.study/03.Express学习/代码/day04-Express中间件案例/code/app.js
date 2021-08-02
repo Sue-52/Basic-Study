@@ -7,6 +7,8 @@ const cors = require("cors");
 const router = require("./routers");
 // 导入错误同意处理配置项文件
 const errorHandler = require("./middlewares/error-handler")
+// 引入数据库设置
+require("./models")
 
 const app = express();
 
