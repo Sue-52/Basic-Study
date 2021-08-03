@@ -15,7 +15,6 @@ methods.forEach(method => {
   };
 })
 
-
 Router.prototype.handler = function (req, res) {
   let { pathname } = new URL(req.url, 'http://locathost:3000')
   const method = req.method.toLowerCase();

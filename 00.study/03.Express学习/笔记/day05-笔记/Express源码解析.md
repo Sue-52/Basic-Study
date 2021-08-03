@@ -349,3 +349,5 @@ Layer.prototype.match = function (pathname) {
 
 module.exports = Layer;
 ```
+
+### 实现单个处理函数的中间件功能
