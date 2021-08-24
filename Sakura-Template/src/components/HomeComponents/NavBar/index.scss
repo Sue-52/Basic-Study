@@ -5,22 +5,27 @@
   position: fixed;
   z-index: 9999;
   top: 0;
-
-  &:hover .top_navbar:hover {
-    position: fixed;
-    left: 0;
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 1px 40px -8px rgb(0 0 0 / 50%);
-    transition: all 0.4s ease;
-  }
 }
 
 .top_navbar {
   display: block;
   width: 100%;
-  background-color: #ccc;
+  background-color: transparent;
   overflow: hidden;
   position: relative;
+  transition: all 1s ease;
+
+  &:hover {
+    position: fixed;
+    left: 0;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 1px 40px -8px rgb(0 0 0 / 50%);
+    transition: all 0.4s ease;
+
+    .top_navbar_list {
+      display: inline-block;
+    }
+  }
 }
 
 // 左侧字体样式
@@ -95,7 +100,7 @@
 
 // 中间导航栏
 .top_navbar_list {
-  display: inline-block;
+  display: none;
   width: auto;
   height: 53px;
   margin: 15px 0 0 10px;
@@ -104,6 +109,7 @@
   position: relative;
   left: 36%;
   transform: translateX(-50%);
+  transition: all 0.4s ease;
 
   ul {
     margin: 0;

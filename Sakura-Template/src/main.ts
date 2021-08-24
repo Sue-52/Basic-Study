@@ -1,10 +1,3 @@
-/*
- * @Author: Edmond℡优格·索托斯T_T～♥
- * @Date: 2021-06-29 20:51:50
- * @LastEditors: OBKoro1
- * @LastEditTime: 2021-07-12 11:47:16
- * @FilePath: \Basic-Study\Sakura-Template\src\main.ts
- */
 import { createApp } from 'vue'
 import App from './App.vue'
 // 清楚默认样式

@@ -1,10 +1,3 @@
-<!--
- * @Author: Edmond℡优格·索托斯T_T～♥
- * @Date: 2021-07-09 20:35:09
- * @LastEditors: OBKoro1
- * @LastEditTime: 2021-07-13 16:16:19
- * @FilePath: \Basic-Study\Sakura-Template\src\components\HomeComponents\NavBar\NavBar.vue
--->
 <template>
   <div class="navbar">
     <header id="header" class="top_navbar">
