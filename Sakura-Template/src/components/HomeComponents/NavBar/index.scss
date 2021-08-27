@@ -25,6 +25,12 @@
     .top_navbar_list {
       display: inline-block;
     }
+
+    @media screen and (max-width: 1240px) {
+      .top_navbar_list {
+        display: none;
+      }
+    }
   }
 }
 

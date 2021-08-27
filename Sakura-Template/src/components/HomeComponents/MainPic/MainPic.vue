@@ -30,6 +30,9 @@
         </div>
       </div>
     </figure>
+    <div class="header-top_down">
+      <i class="iconfont icon-down"></i>
+    </div>
   </div>
 </template>
 

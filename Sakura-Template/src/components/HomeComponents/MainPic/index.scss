@@ -3,6 +3,19 @@
   width: 100%;
   height: auto;
   overflow: hidden;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/dot.gif);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    background-attachment: fixed;
+  }
 }
 
 #centerBar {
@@ -195,3 +208,88 @@ h1:hover::after {
   }
 }
 /* 中间的小字样式 end */
+
+/* 波浪样式 start */
+.wave-first {
+  width: auto;
+  height: 65px;
+  background: url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.5.1/img/Sakura/images/wave1.png)
+    repeat-x;
+  position: absolute;
+  bottom: 0;
+  width: 400%;
+  left: -236px;
+  z-index: 5;
+  opacity: 1;
+  // transiton-property: opacity, bottom;
+  // transition-duration: 0.4s, 0.4s;
+  animation: rotate_left 40s linear infinite;
+}
+@keyframes rotate_left {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -1000px 0;
+  }
+}
+
+.wave-second {
+  width: auto;
+  height: 80px;
+  background: url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.5.1/img/Sakura/images/wave2.png)
+    repeat-x;
+  position: absolute;
+  bottom: 0;
+  width: 400%;
+  left: 0;
+  z-index: 4;
+  opacity: 1;
+  // transiton-property: opacity, bottom;
+  // transition-duration: 0.4s, 0.4s;
+  animation: rotate_right 40s linear infinite;
+}
+@keyframes rotate_right {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@media (max-width: 860px) {
+  .wave-first,
+  .wave-second {
+    display: none;
+  }
+}
+/* 波浪样式 end */
+
+// 顶部向下样式 start
+.header-top_down {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  cursor: pointer;
+  z-index: 5;
+  animation: float 2s linear infinite;
+
+  i {
+    font-size: 28px;
+    color: #fff;
+    transform: scale(1.5, 1);
+  }
+}
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+// 顶部向下样式 end
