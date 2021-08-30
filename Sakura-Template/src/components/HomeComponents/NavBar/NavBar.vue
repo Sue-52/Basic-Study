@@ -1,6 +1,6 @@
 <template>
   <div class="navbar">
-    <header id="header" class="top_navbar">
+    <header id="header" class="top_navbar" :style="{ backgroundColor: data }">
       <!-- 博客名 start -->
       <router-link
         to="/"
@@ -15,7 +15,11 @@
       <!-- 博客名 end -->
 
       <!-- 中间菜单 start -->
-      <div class="top_navbar_list" media="screen">
+      <div
+        class="top_navbar_list"
+        media="screen"
+        :style="{ display: showMiddle }"
+      >
         <ul>
           <li v-for="item in navBarList" :key="item.id">
             <router-link :to="item.route">
@@ -56,6 +60,7 @@ interface List {
 
 export default {
   name: "Navbar",
+  props: ["data", "showMiddle"],
   setup() {
     //#region 顶部导航栏的数据
     // let navBarList = ref<[List]>([

@@ -44,7 +44,7 @@ export default {
   setup() {
     let social_icon = ref([
       { id: "1", iconfont: "iconfont icon-zuo", color: "#1296db" },
-      { id: "2", iconfont: "iconfont icon-github", color: "#000000" },
+      { id: "2", iconfont: "iconfont icon-github", color: "#ffffff" },
       { id: "3", iconfont: "iconfont icon-Telegram", color: "#0088cc" },
       {
         id: "4",
